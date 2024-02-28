@@ -18,16 +18,16 @@ namespace NotasAlunoOO
             Console.Write("Nota do terceiro trimestre: ");
             aluno.nota3 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Aluno {aluno.nome} tirou {aluno.Media()}");
+            Console.WriteLine($"Aluno {aluno.nome} tirou {aluno.Media}");
 
-            if (aluno.Media() >= 60)
+            if (aluno.Media >= 60)
             {
                 Console.WriteLine("APROVADO");
             }
             else
             {
                 Console.WriteLine("REPROVADO");
-                Console.WriteLine("Faltam {0} para atingir 60 pontos", 60 - aluno.Media());
+                Console.WriteLine("Faltam {0} para atingir 60 pontos", 60 - aluno.Media);
             }
         }
     }
