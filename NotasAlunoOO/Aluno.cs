@@ -28,5 +28,9 @@ namespace NotasAlunoOO
             this.nota2 = nota2;
             this.nota3 = nota3;
         }
+
+        public override string ToString(){
+            return $"Nome: {nome}\nNota 1: {nota1}\nNota 2: {nota2}\nNota 3: {nota3}";
+        }
     }
 }
