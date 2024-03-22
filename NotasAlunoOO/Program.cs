@@ -6,17 +6,27 @@ namespace NotasAlunoOO
     {
         static void Main(string[] args)
         {
-            Aluno aluno = new Aluno();
+            string nome;
+            float nota1, nota2, nota3;
 
             Console.WriteLine("Notas do Aluno");
             Console.Write("Nome do Aluno: ");
-            aluno.nome = Console.ReadLine();
+            nome = Console.ReadLine();
             Console.Write("Nota do primeiro trimestre: ");
-            aluno.nota1 = int.Parse(Console.ReadLine());
+            nota1 = float.Parse(Console.ReadLine());
             Console.Write("Nota do segundo trimestre: ");
-            aluno.nota2 = int.Parse(Console.ReadLine());
+            nota2 = float.Parse(Console.ReadLine());
             Console.Write("Nota do terceiro trimestre: ");
-            aluno.nota3 = int.Parse(Console.ReadLine());
+            nota3 = float.Parse(Console.ReadLine());
+
+            Aluno aluno = new Aluno(nome, nota1, nota2, nota3);
+
+            if (aluno.nome == "" || nota1 < 0 || nota2 < 0 || nota3 < 0) {
+                Console.WriteLine("Você deixou algum campo em branco ou pôs um valor errado.\n",
+                    "Ai, ai ai! O que eu faço com você!\n",
+                    "Você causou um erro. Agora sai daqui, palhaço!!");
+                return;
+            }
 
             Console.WriteLine($"Aluno {aluno.nome} tirou {aluno.Media}");
 
